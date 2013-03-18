@@ -2,7 +2,8 @@
 <project name="gobasics" default="display">
 	<target name="display">
 		<echo message="Variable test (WITH env prefix) is: ${env.test}"/>
-		<echo message="GO_SERVER_URL: ${cruise.GO_SERVER_URL}" />
+		<echo message="GO_SERVER_URL without cruise prefix: %GO_SERVER_URL%" />
+		<echo message="GO_SERVER_URL WITH cruise prefix: %cruise.GO_SERVER_URL%" />
 		<echo message="Variable test (with job-level variable, without env prefix): ${job_test}" />
 		<echo message="Variable test (with job-level variable, WITH env prefix): ${env.job_test}" />
 	</target>
