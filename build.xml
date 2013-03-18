@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="gobasics" default="display">
-	<target name="display">
+<project name="gobasics" default="display_cruise">
+    <property environment="cruise" />	
+	<target name="display_variables">
 		<echo message="Variable test (WITH env prefix) is: ${env.test}"/>
 		<echo message="GO_SERVER_URL without cruise prefix: %GO_SERVER_URL%" />
 		<echo message="GO_SERVER_URL WITH cruise prefix: %cruise.GO_SERVER_URL%" />
@@ -11,4 +12,16 @@
 		<echo message="Variable test property without cruise prefix is: ${test_property}"/>
 		<echo message="Variable test (WITH env prefix) property is: ${env.test_property}"/>
 	</target>
+	
+	<target name="display_cruise">
+	    <echo message="Building all!" />
+	    <echo message="GO_SERVER_URL: ${cruise.GO_SERVER_URL}" />
+	    <echo message="GO_PIPELINE_NAME: ${cruise.GO_PIPELINE_NAME}" />
+	    <echo message="GO_PIPELINE_COUNTER: ${cruise.GO_PIPELINE_COUNTER}" />
+	    <echo message="GO_PIPELINE_LABEL: ${cruise.GO_PIPELINE_LABEL}" />
+	    <echo message="GO_STAGE_NAME: ${cruise.GO_STAGE_NAME}" />
+	    <echo message="GO_STAGE_COUNTER: ${cruise.GO_STAGE_COUNTER}" />
+	    <echo message="GO_JOB_NAME: ${cruise.GO_JOB_NAME}" />
+	    <echo message="GO_REVISION: ${cruise.GO_REVISION}" />
+	</target>	
 </project>
