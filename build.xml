@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="gobasics" default="display">
 	<target name="display">
-		<echo message="Variable test is: ${test}"/>
+		<echo message="Variable test (without cruise prefix) is: ${test}"/>
+		<echo message="Variable test (WITH cruise prefix) is: ${cruise.test}"/>
 	</target>
 </project>
