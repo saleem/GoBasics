@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cruise xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cruise-config.xsd" schemaVersion="53">
+  <server artifactsdir="artifacts">
+    <license user="Licensee name">Replace this with your actual Go license from ThoughtWorks</license>
+  </server>
+  <pipelines group="defaultGroup" />
+  <pipelines group="defaultGroup">
+    <pipeline name="GoBasics" isLocked="false">
+      <environmentvariables>
+        <variable name="pipeline_var">
+          <value>hello pipeline</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="git@github.com:saleem/GoBasics.git" />
+      </materials>
+      <stage name="defaultStage">
+        <environmentvariables>
+          <variable name="stage_var">
+            <value>hello stage</value>
+          </variable>
+        </environmentvariables>
+        <jobs>
+          <job name="display">
+            <environmentvariables>
+              <variable name="job_var">
+                <value>hello job</value>
+              </variable>
+            </environmentvariables>
+            <tasks>
+              <ant buildfile="build.xml" target="display_one_var" workingdir=".">
+                <runif status="passed" />
+              </ant>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+  </pipelines>
+  <agents>
+    <agent hostname="ss6964" ipaddress="192.168.0.31" uuid="put the uuid here" />
+  </agents>
+</cruise>
+
