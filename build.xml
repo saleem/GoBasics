@@ -6,5 +6,9 @@
 		<echo message="GO_SERVER_URL WITH cruise prefix: %cruise.GO_SERVER_URL%" />
 		<echo message="Variable test (with job-level variable, without env prefix): ${job_test}" />
 		<echo message="Variable test (with job-level variable, WITH env prefix): ${env.job_test}" />
+		
+		<echo message="Variable test (WITH cruise prefix) property is: ${cruise.test_property}"/>
+		<echo message="Variable test property without cruise prefix is: ${test_property}"/>
+		<echo message="Variable test (WITH env prefix) property is: ${env.test_property}"/>
 	</target>
 </project>
