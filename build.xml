@@ -3,7 +3,8 @@
     <property environment="cruise" />
 	<target name="display_one_var">
 		<echo message="Pipeline variable test is: ${cruise.pipeline_var}"/>
-		<echo message="Job ariable job_test is: ${cruise.job_var}"/>
+		<echo message="Stage variable job_test is: ${cruise.stage_var}"/>
+		<echo message="Job variable job_test is: ${cruise.job_var}"/>
 	</target>
 	
 	<target name="display_cruise">
