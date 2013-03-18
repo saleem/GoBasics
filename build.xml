@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="gobasics" default="display">
 	<target name="display">
-		<echo message="Variable test (without cruise prefix) is: ${test}"/>
-		<echo message="Variable test (WITH cruise prefix) is: ${cruise.test}"/>
+		<echo message="Variable test (WITH env prefix) is: ${env.test}"/>
 		<echo message="GO_SERVER_URL: ${cruise.GO_SERVER_URL}" />
-		<echo message="Variable test (with job-level variable, without cruise prefix): ${job_test}" />
-		<echo message="Variable test (with job-level variable, WITH cruise prefix): ${cruise.job_test}" />
+		<echo message="Variable test (with job-level variable, without env prefix): ${job_test}" />
+		<echo message="Variable test (with job-level variable, WITH env prefix): ${env.job_test}" />
 	</target>
 </project>
