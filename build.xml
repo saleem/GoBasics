@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="gobasics" default="display_cruise">
-    <property environment="cruise" />	
+<project name="gobasics" default="display_one_var">
+    <property environment="cruise" />
+	<target name="display_one_var">
+		<echo message="Variable test (WITH cruise prefix) is: ${cruise.test}"/>
+		<echo message="Variable job_test (WITH cruise prefix) is: ${cruise.job_test}"/>
+	</target>
+	
 	<target name="display_variables">
 		<echo message="Variable test (WITH env prefix) is: ${env.test}"/>
 		<echo message="GO_SERVER_URL without cruise prefix: %GO_SERVER_URL%" />
